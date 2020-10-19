@@ -67,7 +67,8 @@ footer{
 
 #logo{
    /*Your code here.*/
-   animation: logo_wiggle 15s;
+   animation-name: logo_wiggle;
+   animation-duration: 15s;
 }
 
 /* Cards! */
@@ -152,14 +153,14 @@ header{
   /*Your  code here again.*/
   display: flex;
   flex-flow: column wrap;
-  align-content: center;
+  align-items: center;
 }
 
 .nav_links{
   /*Your code here again.*/
   display: flex;
   flex-flow: column wrap;
-  align-content: center;
+  align-items: center;
 }
 
 .nav_item a{
@@ -215,15 +216,19 @@ header{
   
   body {
     background-image: none;
-
   }
   
   .pricing {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: flex-start;
   }
   
   .gallery{
+    display: none;
+  }
+
+  #gallery{
     display: none;
   }
 
@@ -233,6 +238,5 @@ header{
 /*Add media query to handle reduced-motion*/
 @media screen (prefers-reduced-motion: reduced) {
   #logo {
-    animation-name: logo_wiggle;
-    transition: none;
+    animation: none;
   }
